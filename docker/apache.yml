@@ -1,0 +1,10 @@
+apiVersion: v.1
+services:
+  apache:
+    image: httpd:lastest
+    container_name: my-apache-app
+    ports:
+    - '80:80'
+    #endereço da aplicação
+    volume:
+    - ./website:/usr/local/apache/htdoc
